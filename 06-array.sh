@@ -1,5 +1,5 @@
 #!/bin/bash
 PERSONS=("R" "S" "H")
 
-echo "PERSONS[0]"
-echo "PERSONS[@]"
+echo "First person ${PERSONS[0]}"
+echo "All persons ${PERSONS[@]}"
