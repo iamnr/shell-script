@@ -19,7 +19,7 @@ VALIDATE(){
 
 USERID=$(id -u)
 
-if [ USERID -ne 0]
+if [ $USERID -ne 0]
 then
     echo "Run with root access"
     exit 1
@@ -27,5 +27,5 @@ fi
 
 yum install mysql -y &>>$LOGFILE
 
-validate $? "Installing Mysql"
+VALIDATE $? "Installing Mysql"
 
