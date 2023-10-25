@@ -1,5 +1,9 @@
 #!bin/bash
 
+DATE=$(date +%F)
+PATH=/home/centos/shell-script/logsfolder
+LOGFILE=$PATH-$0-$DATE.log
+
 VALIDATE(){
 
     if [ $1 -ne 0]
@@ -19,7 +23,7 @@ then
     exit 1
 fi 
 
-yum install mysql -y
+yum install mysql -y &>>$LOGFILE
 
 VALIDATE $? "Installing MySQL"
 
