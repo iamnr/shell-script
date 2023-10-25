@@ -24,9 +24,7 @@ USERID=$(id -u)
 if [ $USERID -ne 0 ]
 then
     echo "Run with root access"
-    
-else
-    echo "Sucess"
+    exit 1
 fi
 
 yum install mysql -y &>>$LOGFILE
