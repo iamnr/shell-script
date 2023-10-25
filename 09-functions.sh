@@ -1,5 +1,15 @@
 #!bin/bash
 
+VALIDATE(){
+
+    if [ $1 -ne 0]
+    then
+        echo "$2 failed"
+    else
+        echo "$2 sucess"
+    fi 
+}
+
 
 USERID=$(id -u)
 
@@ -10,3 +20,6 @@ then
 fi 
 
 yum install mysql -y
+
+VALIDATE $? "Installing MySQL"
+
