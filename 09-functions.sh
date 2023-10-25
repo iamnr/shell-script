@@ -14,7 +14,7 @@ VALIDATE(){
         echo "Failure"
         exit 1
     else
-        echo "Sucess"
+        echo -e "$2 Sucess"
     fi
 }
 
