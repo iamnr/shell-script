@@ -13,7 +13,7 @@ VALIDATE(){
     then    
         echo "Failure"
     else
-        "Sucess"
+        echo "Sucess"
     fi
 }
 
