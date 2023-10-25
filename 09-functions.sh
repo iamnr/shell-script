@@ -2,7 +2,7 @@
 
 DATE=$(date +%F)
 PATH=/home/centos/shell-script/logsfolder
-LOGFILE=$PATH-$0-$DATE.log
+LOGFILE=$PATH/$0-$DATE.log
 
 VALIDATE(){
 
