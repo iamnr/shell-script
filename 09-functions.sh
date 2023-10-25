@@ -1,42 +1,36 @@
-#!/bin/bash
-
-# our program goal is to install mysql
+#!bin/bash
 
 DATE=$(date +%F)
 SCRIPT_NAME=$0
-LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
+PATH=/home/centos/LogsFolder
+LOGFILE=$PATH/$SCRIPT_NAME-$DATE.log
 
-R="\e[31m"
-G="\e[32m"
-N="\e[0m"
+#echo "$LOGFILE"
 
-# this function should validate the previous command and inform user it is success or failure
 VALIDATE(){
-    #$1 --> it will receive the argument1
-    if [ $1 -ne 0 ]
-    then
-        echo -e "$2 ... $R FAILURE $N"
+
+    if [ $1 -ne 0]
+    then    
+        echo "Failure"
         exit 1
     else
-        echo -e "$2 ... $G SUCCESS $N"
+        echo -e "$2 Sucess"
     fi
 }
+
 
 USERID=$(id -u)
 
 if [ $USERID -ne 0 ]
 then
-    echo "ERROR:: Please run this script with root access"
+    echo "Run with root access"
     exit 1
-# else
-#     echo "INFO:: You are root user"
 fi
 
-# it is our responsibility again to check installation is success or not
 yum install mysql -y &>>$LOGFILE
 
-VALIDATE $? "Installing MySQL"
+VALIDATE $? "Installing Mysql"
 
-yum install posddtfix -y &>>$LOGFILE
 
-VALIDATE $? "Installing postfix"
+
+
