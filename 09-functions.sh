@@ -21,11 +21,11 @@ VALIDATE(){
 
 yum install mysql -y 
 
-VALIDATE $? "Installing Mysql"
+echo "$?"
 
 yum install posddtfix -y 
 
-VALIDATE $? "Installing Postfix"
+echo "$?"
 
 
 
