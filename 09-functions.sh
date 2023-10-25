@@ -7,9 +7,6 @@ LOGFILE=$PATH/$SCRIPT_NAME-$DATE.log
 
 #echo "$LOGFILE"
 
-
-
-
 yum install mysql -y 
 
 echo "$?"
