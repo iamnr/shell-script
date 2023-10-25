@@ -9,7 +9,7 @@ then
     echo "Run with root access"
     
 else
-    echo "Sucess
+    echo "Sucess"
 fi
 
 
