@@ -7,7 +7,9 @@ USERID=$(id -u)
 if [ $USERID -ne 0 ]
 then
     echo "Run with root access"
-    exit 1
+    
+else
+    echo "Sucess
 fi
 
 
