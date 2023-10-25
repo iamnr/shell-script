@@ -1,14 +1,12 @@
 #!bin/bash
 
-DATE=$(date +%F)
-PATH=/home/centos/shell-script/logsfolder
-LOGFILE=$PATH/$0-$DATE.log
 
 VALIDATE(){
 
     if [ $1 -ne 0]
     then
         echo "$2 failed"
+        exit 1
     else
         echo "$2 sucess"
     fi 
