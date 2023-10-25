@@ -27,11 +27,11 @@ then
     exit 1
 fi
 
-yum install mysql -y &>>$LOGFILE
+yum install mysql -y 
 
 VALIDATE $? "Installing Mysql"
 
-yum instal posddtfix -y &>>$LOGFILE
+yum install posddtfix -y 
 
 VALIDATE $? "Installing Postfix"
 
