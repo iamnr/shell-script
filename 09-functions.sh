@@ -1,5 +1,7 @@
 #!bin/bash
 
+DATE=$(date +%F)
+LOGFILE=/tmp/$0-$DATE.log
 
 VALIDATE(){
 
