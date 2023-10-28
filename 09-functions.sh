@@ -5,7 +5,7 @@ LOGFILE=/tmp/$0-$DATE.log
 
 VALIDATE(){
 
-    if [ $1 -ne 0]
+    if [ $1 -ne 0 ]
     then
         echo "$2 failed"
         exit 1
