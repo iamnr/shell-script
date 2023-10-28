@@ -7,4 +7,4 @@ echo "script name :$0"
 
 echo "All args :$@"
 
-ech0 "Number fo args : $#"
+echo "Number fo args : $#"
