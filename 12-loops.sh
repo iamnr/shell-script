@@ -14,10 +14,10 @@ fi
 VALIDATE(){
     if [ $1 -ne 0 ]
     then 
-        echo " Installing $2"
+        echo " Installing failure $2"
         exit 1
     else 
-        echo " $2 is in not installed"
+        echo " $2 is installed"
     fi
 }
 
