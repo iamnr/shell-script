@@ -12,7 +12,7 @@ then
 fi
 
 VALIDATE(){
-    if [ $i -ne 0 ]
+    if [ $1 -ne 0 ]
     then 
         echo " Installing $1"
         exit 1
